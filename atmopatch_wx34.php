@@ -55,16 +55,16 @@ input:checked+.slider:before{-webkit-transform:translateX(26px);-ms-transform:tr
 </div>
 <div id="Instr" class="tabcontent" style="display:block;">
 <span><strong>Instructions for patching Home Weather Station for Cumulus template (CU-HWS)</strong></span><br /><br />
-<span>1. Make sure Atmocom support scripts <a href="https://github.com/atmocom/php-parsers" target="_blank"><strong>atmolog.php</strong></a> and 
+<span>1. Verify that Atmocom support scripts <a href="https://github.com/atmocom/php-parsers" target="_blank"><strong>atmolog.php</strong></a> and 
 <a href="https://github.com/atmocom/php-formatters" target="_blank"><strong>wxloader.php</strong></a> are installed and working correctly.</span><br /><br />
-<span>2. Download and extract Cumulus HWS template from <a href="https://github.com/ktrue/CU-HWS" target="_blank">https://github.com/ktrue/CU-HWS</a> 
+<span>2. Download and unzip latest Cumulus HWS template distribution from <a href="https://github.com/ktrue/CU-HWS" target="_blank"><strong>https://github.com/ktrue/CU-HWS</strong></a> 
 (or <a href="https://github.com/ktrue/CU-HWS/archive/master.zip"><strong>Download ZIP</strong></a> directly).<br /><br />
-<span>3. Upload all CU-HWS files and folders to the same directory on your web server where this script (atmopatch_wx34.php) resides.</span><br /><br />
+<span>3. Upload CU-HWS files to the same directory on your web server where this script is located.</span><br /><br />
 <span>4. Enter your WU station and website specific information in the form below and click Patch button.</span><br /><br />
-<span>5. If patch completes with no errors, configure remaining template settings using the regular HWS configuration page 
+<span>5. If patch completes with no errors, configure remaining template settings using the the standard CU-HWS configuration method 
 (see <a href="https://github.com/ktrue/CU-HWS#home-weather-station-weather-website-template-for-cumuluscumulus-mx" target="_blank">HWS GitHub readme</a> for instructions).</span><br /><br />
 <span>6. After patching, in order to secure website you should delete <strong>atmopatch_wx34.php</strong> from the CU-HWS directory.</span><br /><br />
-<span><strong>NOTE:</strong> This script is provided as-is. Help and support for CU-HWS can be obtained via its GitHub page or <a href="https://www.wxforum.net/" target="_blank"><strong>wxforum.net</strong></a> </span><br /><br />
+<span><strong>NOTE:</strong> This script is provided as is. Help and support for CU-HWS template can be obtained via its GitHub page or <a href="https://www.wxforum.net/" target="_blank"><strong>wxforum.net</strong></a> weather community forum.</span><br /><br />
 
 </div>
 <div id="Device" class="tabcontent" style="display:block;">
@@ -317,7 +317,7 @@ function fmtprint_message($msg, $level)
     else if($level == 1) $fontcol = '#000000';
 
     echo "<span style=\"font-size: 14px; font-weight:bold; color:#000000;\"><strong>&#8226;</strong></span>&nbsp;&nbsp;";
-    echo "<span style=\"font-size:14px;font-weight:bold;color:$fontcol;\"><strong>$xmsg$msg</strong></span><br />";
+    echo "<span style=\"font-size:14px;font-weight:regular;color:$fontcol;\"><strong>$xmsg$msg</strong></span><br />";
 }
 
 function startsWith($str, $searchstr)
